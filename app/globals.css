@@ -16,18 +16,86 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* predefine class start*/
+
+.color-pink {
+  color: #f85e9f;
 }
+.color-gray {
+  color: #eeeeee;
+}
+.bg-pink {
+  background-color: #f85e9f;
+}
+.bg-blue {
+  background-color: #5d50c6;
+}
+.bg-yellow {
+  background-color: #facd49;
+}
+.border-1px-gray {
+  border: 1px solid #eeeeee;
+}
+
+/* predefine class end*/
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.hero {
+  @apply bg-white;
+}
+.ellipse23 {
+  position: absolute;
+  z-index: -1;
+}
+.circleBg {
+  position: absolute;
+  z-index: -1;
+  filter: blur(4px);
+}
+.logoWrapper {
+  width: 145px;
+  height: 40px;
+}
+
+.customButton {
+  min-width: 128px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.customButton > img {
+  margin: 0 3px 4px 4px;
+  line-height: 14px;
+}
+.customButton > span {
+  margin: 0 4px 0 3px;
+}
+
+.nav > a {
+  color: rgba(25, 24, 37, 0.5);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Footer */
+.footerChild > p,
+link {
+  color: #191825bf;
+}
+
+@media (min-width: 640px) {
+  .customButton {
+    font-size: 12px;
   }
 }
